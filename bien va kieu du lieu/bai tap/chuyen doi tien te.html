@@ -5,6 +5,32 @@
     <title>chuyen doi tien te</title>
 </head>
 <body>
-<form
+<form>
+    <p><b>Amount</b></p>
+    <input id="amount" type="text" size="10">
+    <p><b> form currency</b></p>
+    <select id="from">
+        <option value="VND" selected>VietNam</option>
+        <option value="USD">My</option>
+        <option value="Euro">Euro</option>
+    </select><br>
+    <p><b>To currency</b></p>
+    <select id="to">
+        <option value="VND" selected>VND</option>
+        <option value="USD">My</option>
+        <option value="Euro">Euro</option>
+    </select> <br><br>
+    <button type="button" onclick="chuyendoi()">Convert</button> <br>
+    <label> Result: <span id="KQ"></span></label>
+</form>
+<script>
+    function convert() {
+        let number = +document.getElementById("number").value;
+        let fromCur = +document.getElementById("fromCur").value;
+        let toCur = +document.getElementById("toCur").value;
+        let convert = number / fromCur * toCur;
+        document.getElementById("cal").innerText = convert;
+    }
+</script>
 </body>
 </html>
